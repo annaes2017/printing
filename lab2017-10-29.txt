@@ -1,0 +1,57 @@
+Projekt2:
+
+/**
+ * Created by zp112956 on 2017-10-29.
+ */
+public class Projekt2 {
+    public static void main (String[] args){
+        int a = 5;
+        int b = --a;
+        System.out.println("b wynosi " + b);
+
+        int x = 5;
+        int y = ++x;
+        System.out.println("y wynosi " + y);
+
+           }
+}
+
+
+------------------------------------------------
+Projekt3:
+
+import java.util.Scanner;
+
+import static javax.management.Query.and;
+import static javax.management.Query.or;
+
+/**
+ * Created by zp112956 on 2017-10-29.
+ */
+public class Projekt3 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Podaj d³ugoœæ boku x: ");
+        int x = input.nextInt();
+
+        System.out.print("Podaj d³ugoœæ boku y: ");
+        int y = input.nextInt();
+
+        System.out.print("Podaj d³ugoœæ boku z: ");
+        int z = input.nextInt();
+
+        double p;
+        double pole;
+
+        if (x == y && y == z)
+            System.out.println("Gratulacje, stworzy³eœ trójk¹t równoboczny!");
+
+        else if ((((x + y) > z) || ((x + z) > y) || ((z + y) > x)) && ((x + y + z)/2) >= 1){
+            System.out.println("Ok, mo¿e wyjdzie z tego trójk¹t ;)");
+            p = (x + y + z) / 2;
+            pole = Math.sqrt(p * (p - x) * (p - y) * (p - z));
+            System.out.println("Pole Twojego trójk¹ta wynosi: " + pole);
+        } else System.out.println("Sorry, to siê nie uda :( ");
+    }
+}
